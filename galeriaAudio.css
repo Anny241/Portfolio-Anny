@@ -1,0 +1,226 @@
+/* Estilos Gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black; /* Fundo preto para o site */
+    color: white; /* Cor do texto para garantir legibilidade */
+}
+
+/* Estilo do Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Padding aumentado */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo do header mais opaco */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header .logo img {
+    max-height: 80px; /* Tamanho do logo */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px; /* Espaço entre os itens do menu */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 10px; /* Padding aumentado */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #575757;
+}
+
+/* Estilo do Main */
+main {
+    margin-top: 80px; /* Ajustado para a altura do header */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Padding adicionado */
+}
+
+/* Estilo do Título e Texto Explicativo */
+.gallery-title {
+    font-size: 36px; /* Tamanho do título */
+    margin: 20px 0; /* Espaço acima e abaixo do título */
+    text-align: center; /* Centraliza o texto */
+}
+
+.gallery-description {
+    font-size: 18px; /* Tamanho do texto explicativo */
+    max-width: 800px; /* Largura máxima para o texto */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 40px; /* Espaço abaixo do texto explicativo */
+}
+
+/* Estilo da Galeria de Áudios */
+.audio-gallery {
+    display: flex;
+    flex-direction: column; /* Alinha os áudios verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    gap: 40px; /* Espaço entre os áudios e o texto acima e abaixo */
+    padding: 20px;
+}
+
+.audio {
+    width: 100%;
+    max-width: 800px; /* Largura máxima dos áudios */
+    text-align: center; /* Centraliza o texto */
+}
+
+audio {
+    width: 100%; /* Faz o áudio preencher o contêiner */
+    height: 50px; /* Altura ajustada para o player de áudio */
+}
+
+/* Estilo do Footer */
+footer {
+    text-align: center;
+    padding: 20px; /* Padding ajustado */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo igual ao do header */
+    color: white;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Sombra do footer */
+    margin-top: 40px; /* Espaço acima do footer */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 10px 0; /* Espaçamento do parágrafo */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre ícones sociais */
+    margin: 10px 0; /* Espaço acima e abaixo dos ícones sociais */
+}
+
+.social-link {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 30px; /* Tamanho dos ícones sociais */
+    height: auto; /* Mantém a proporção original */
+    vertical-align: middle; /* Alinhamento vertical dos ícones */
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1200px) {
+    .menu .logo {
+        margin-left: -100px;
+    }
+    .menu nav a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+ 
+@media (max-width: 992px) {
+    .banner {
+        height: 400px;
+        margin-top: 50px;
+    }
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu .logo {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    .menu nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu nav a {
+        width: auto;
+        text-align: left;
+        padding: 10px 20px;
+        border-radius: 0;
+    }
+}
+ 
+@media (max-width: 768px) {
+    .banner {
+        height: 300px;
+    }
+    .menu {
+        padding: 15px;
+    }
+    .menu .logo img {
+        transform: scale(0.25);
+    }
+    .menu nav a {
+        font-size: 12px;
+        padding: 10px;
+    }
+    .social-icons i, .docs {
+        font-size: 8px;
+    }
+}
+ 
+@media (max-width: 576px) {
+    .banner {
+        height: 200px;
+        margin-top: 20px;
+    }
+    .menu {
+        padding: 10px;
+    }
+    .menu nav a {
+        font-size: 10px;
+        padding: 8px;
+    }
+    .social-icons i, .docs {
+        font-size: 6px;
+    }
+}
