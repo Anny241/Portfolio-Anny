@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Anny Beatriz</title>
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logotipo 2.png" alt="Logotipo de Anny Beatriz">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="" class="dropbtn">Galeria</a>
+                    <div class="dropdown-content">
+                        <a href="galeriaFotos.html">Fotos</a>
+                        <a href="galeriaVideos.html">Vídeos</a>
+                        <a href="galeriaAudios.html">Áudios</a>
+                    </div>
+                </li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contato-section" style="display: flex; justify-content: space-between;">
+            <!-- Campo de texto à esquerda -->
+            <div class="info-contato" style="width: 40%;">
+                <h2>Contato</h2>
+                <p>Entre em contato para colaborações, projetos ou dúvidas. Estou disponível nas redes sociais ou pelo formulário ao lado.</p>
+            </div>
+
+            <!-- Formulário de contato à direita -->
+            <div class="form-contato" style="width: 50%;">
+                <form action="enviarFormulario.php" method="POST">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required><br><br>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.instagram.com/_annyalexandre/" target="_blank" class="social-link">
+                    <img src="instagram.png" alt="Instagram Logo" class="social-icon">
+                </a>
+                <a href="https://vsco.co/abalexandre/gallery" target="_blank" class="social-link">
+                    <img src="vsco.png" alt="VSCO Logo" class="social-icon">
+                </a>
+            </div>
+            <p>Copyright © 2024 - Anny Beatriz. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
+

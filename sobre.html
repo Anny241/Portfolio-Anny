@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Anny Beatriz</title>
+    <link rel="stylesheet" href="sobre.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logotipo 2.png" alt="Logotipo de Anny Beatriz">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Galeria</a>
+                    <div class="dropdown-content">
+                        <a href="galeriaFotos.html">Fotos</a>
+                        <a href="galeriaVideos.html">Vídeos</a>
+                        <a href="galeriaAudios.html">Áudios</a>
+                    </div>
+                </li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bio">
+            <h1>Olá! Se você chegou até aqui, espero que já tenha tido a chance de conferir um pouco do meu trabalho. Então, vou aproveitar para compartilhar algumas informações importantes sobre mim e sobre o que faço.</h1>
+            <p>Meu nome é Anny Beatriz Alexandre, nasci na cidade de Marília, interior de São Paulo, em 24 de agosto de 2006. Desde pequena, sempre me considerei uma criança criativa, explorando cores, formas e sons de todas as maneiras possíveis. Ao longo do tempo, essa curiosidade natural se transformou em uma verdadeira paixão pela arte e pelas diversas formas de enxergar o mundo.</p>
+            <p>Hoje, estou cursando o 3º ano do ensino médio e, em paralelo, faço o curso técnico em Multimídia no SESI de Osvaldo Cruz. Esse curso tem me permitido aprofundar minha habilidade de contar histórias e expressar ideias de maneiras únicas, seja através da literatura, que eu amo profundamente, ou por meio de vídeos, fotografias e até mesmo áudios. O que me fascina é a possibilidade de traduzir o mundo à minha volta em formas que toquem as pessoas de maneiras diferentes.</p>
+            <p>Minha jornada artística está apenas começando, mas meu desejo de explorar e criar é infinito. Cada novo projeto é uma oportunidade de compartilhar um pouco do meu olhar com o mundo, e estou ansiosa para ver até onde essa paixão me levará.</p>
+            <p>Obrigada por estar aqui e por fazer parte dessa jornada!♡</p>
+        </section>
+
+        <section class="right-content">
+            <div class="carousel">
+                <img src="sobreFotos/foto criança.jpeg" alt="Imagem 1">
+                <img src="sobreFotos/foto criança 2.jpeg" alt="Imagem 2">
+                <img src="sobreFotos/foto criança 3.jpeg" alt="Imagem 3">
+                <img src="foto anny.jpeg" alt="Imagem 4">
+            </div>
+            <div class="what-i-do">
+                <h2>O que eu faço?</h2>
+                <p>O técnico de multimídia cria e produz conteúdos como vídeos, animações, sites e aplicativos, escolhendo imagens, textos e músicas. Ele também grava, edita e programa, além de distribuir o conteúdo para canais apropriados como redes sociais e plataformas de vídeo.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.instagram.com/_annyalexandre/" target="_blank" class="social-link">
+                    <img src="instagram.png" alt="Instagram Logo" class="social-icon">
+                </a>
+                <a href="https://vsco.co/abalexandre/gallery" target="_blank" class="social-link">
+                    <img src="vsco.png" alt="VSCO Logo" class="social-icon">
+                </a>
+            </div>
+            <p>Copyright © 2024 - Anny Beatriz. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript para o carrossel de imagens
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            images[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].style.display = 'block';
+        }
+
+        function showPreviousImage() {
+            images[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            images[currentIndex].style.display = 'block';
+        }
+
+        // Inicializa o carrossel
+        images.forEach((img, index) => {
+            img.style.display = 'none';
+            if (index === 0) img.style.display = 'block';
+        });
+
+        // Altere o intervalo para o tempo desejado (por exemplo, 3 segundos)
+        setInterval(showNextImage, 3000);
+    </script>
+</body>
+</html>
